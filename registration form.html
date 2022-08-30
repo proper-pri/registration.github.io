@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="E:\front end development\bootstrap niraj sir\bootstrap.css">
+  <link rel="stylesheet" href="reg form.css">
+  <title>reg frm</title>
+
+</head>
+<style>
+  body {
+    background-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  }
+
+  #inputs {
+    align-items: center;
+    max-width: 600px;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+
+  }
+
+  .inputFeilds {
+    padding: 4px;
+    height: 20px;
+    margin-left: 300px;
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    height: 71px;
+    width: 100%;
+    font-family: monospace;
+    background: none;
+  }
+
+
+  .inputFeilds:hover {
+    box-shadow: 2px 2px 2px rgb(10, 249, 82);
+    color: rgb(10, 249, 82);
+  }
+
+  .glow {
+    font-size: px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+    margin-top: 20px;
+  }
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px rgb(240, 4, 4), 0 0 20px #fff, 0 0 30px #e6000c, 0 0 40px #6b00e6, 0 0 50px #00e632, 0 0 60px #b0e600, 0 0 70px #e68600;
+    }
+
+    to {
+      text-shadow: 0 0 20px rgb(247, 14, 153), 0 0 30px #0a7e7e, 0 0 40px #076c2c, 0 0 50px #2f07f8, 0 0 60px #f9f905, 0 0 70px #ffa04d, 0 0 80px #64512a;
+    }
+  }
+
+  #customers {
+    font-family: monospace;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  #customers td,
+  #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  #customers tr:nth-child(even) {
+    background-color: white;
+  }
+
+  #customers tr:nth-child(odd) {
+    background-color: beige;
+
+  }
+
+  #customers tr:hover {
+    background-color: palevioletred;
+  }
+
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: palevioletred;
+    color: black;
+  }
+
+  .buttons {
+    margin-left: 256px;
+
+    height: 200vh;
+    width: 100%;
+  }
+
+  button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .button1 {
+    background-color: #4CAF50;
+  }
+
+  /* Green */
+  .button2 {
+    background-color: #008CBA;
+  }
+
+  /* Blue */
+  .button3 {
+    background-color: #f44336;
+  }
+
+  /* Red */
+  .button4 {
+    background-color: #e7e7e7;
+    color: black;
+  }
+
+  /* Gray */
+  .button5 {
+    background-color: #555555;
+  }
+
+  /* Black */
+
+  #splash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("reg-img.gif");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 99;
+  }
+
+  navbar {
+    font-size: 28px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    top: 0px;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    color: palevioletred;
+    text-decoration: none;
+  }
+
+  #accessTable {
+    display: none;
+  }
+
+  #accessRegister {
+    display: none;
+  }
+
+  #accessLogin {
+    display: none;
+  }
+</style>
+
+<body>
+  <!-- NAVBAR*************************** -->
+  <navbar>
+    <ul>
+      <li><a href="#accessRegister" onclick="accessReg()">Register</a></li>
+      <li><a href="#contact" onclick="accessLogin()">Login</a></li>
+      <!-- <li><a href="#news" onclick="accessTab()">data</a></li> -->
+
+    </ul>
+  </navbar>
+  <!-- <div id="splash">
+
+  </div> -->
+
+  <!-- REGISTRAYION PAGE******************************************8 -->
+  <section-register id="accessRegister">
+    <h1 class="glow">Register Yourself</h1>
+    <div id="inputs">
+      <input class="inputFeilds" type="text" id="txtId" placeholder="Enter Id">
+
+      <input class="inputFeilds" type="password" id="txtPassword" placeholder="Enter password">
+      <input class="inputFeilds" type="text" id="txtName" placeholder="Enter Name">
+
+      <input class="inputFeilds" type="text" id="txtAddress" placeholder="Enter Address">
+
+    </div>
+    <br>
+    <buttons class="buttons">
+      <button class="button1" onclick="save()">Save</button>
+      <!-- <button class="button2" onclick="selectDel()">Delete Selected</button> -->
+      <!-- <button class="button3" onclick="resetDB()">Reset DB</button>
+      <button class="button4" onclick="updateDB()">Update DB</button> -->
+      <!-- <button class="button5" onclick="showDB()">Show DB</button> -->
+    </buttons>
+  </section-register>
+
+
+  <!-- LOGIN PAGE*************************************** -->
+  <section-login id="accessLogin">
+    <div id="inputs">
+      <input class="inputFeilds" type="text" id="txtIdLogin" placeholder="Enter Id">
+      <input class="inputFeilds" type="password" id="txtPasswordLogin" placeholder="Enter password">
+      <button class="button6" onclick="login()">login</button>
+    </div>
+
+  </section-login>
+
+
+  <!-- TABLE-DATA PAGE************************************************* -->
+
+  <section-table id="accessTable">
+
+    <table style="width:100%" id="customers">
+      <thead>
+        <th style="width:5%"><input onclick="set()" type="checkbox" id="chk">Select</th>
+        <th style="width:10%">Name</th>
+        <th style="width:10%">Password</th>
+        <th style="width:10%">ID</th>
+        <th style="width:10%">Address</th>
+        <th style="width:10%">update/Delete</th>
+      </thead>
+      <tbody id="bdy">
+
+      </tbody>
+    </table>
+    <div id="inputs">
+      <input class="inputFeilds" type="text" id="txtIdLog" placeholder="Enter Id">
+      <input class="inputFeilds" type="password" id="txtPasswordLog" placeholder="Enter password">
+      <input class="inputFeilds" type="text" id="txtNameLog" placeholder="Enter Name">
+      <input class="inputFeilds" type="text" id="txtAddressLog" placeholder="Enter Address">
+
+    </div>
+    <button class="button3" onclick="resetDB()">Reset DB</button>
+    <button class="button4" onclick="updateDB()">Update DB</button>
+    <button class="button6" onclick="accessLogin()">logout</button>
+  </section-table>
+</body>
+<!-- SCRRRIIIPPPTTTIIIIINNNGGGGG -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+<!--//fire base linking-->
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+
+<script>
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAEDLWKuB9zqbyfH6xkeq5UN3ipO3LvKJI",
+    authDomain: "registration-form-9e2f7.firebaseapp.com",
+    projectId: "registration-form-9e2f7", //firebase configuration
+    storageBucket: "registration-form-9e2f7.appspot.com",
+    messagingSenderId: "694020116750",
+    appId: "1:694020116750:web:1325bf23e36f337d00c75f"
+
+  };
+
+  firebase.initializeApp(firebaseConfig);
+
+  function showDB() {                                            //show button
+    document.getElementById("bdy").innerHTML = ""
+    firebase.database().ref(`/Registration`).once("value", function (AllRecord) {
+      AllRecord.forEach(function (snapshot) {
+        addItemOnTable(snapshot.val().Name, snapshot.val().Password, snapshot.val().ID, snapshot.val().Address)
+      })
+    })
+
+  }
+
+  function save() {
+    id = document.getElementById("txtId").value
+    name = document.getElementById("txtName").value
+    pass = document.getElementById("txtPassword").value         //taking values in variables
+    address = document.getElementById("txtAddress").value
+
+    const obj = {
+      ID: id,
+      Name: name,
+      Password: pass,
+      Address: address
+    }
+
+    firebase.database().ref(`/Registration/` + id).set(obj); //firebase key connection
+    alert("This id is saved in database")
+
+
+  }
+
+  function updateDB() {                                         //update button 
+    id = document.getElementById("txtIdLog").value
+    name = document.getElementById("txtNameLog").value
+    pass = document.getElementById("txtPasswordLog").value //taking values in variables
+    address = document.getElementById("txtAddressLog").value
+
+
+    const obj = {
+      ID: id,
+      Name: name,
+      Password: pass, //creating object 
+      Address: address
+    }
+
+    firebase.database().ref(`/Registration/` + id).update(obj); //appending and updating obj
+
+    alert("This id is updated in database")
+      document.getElementById("txtIdLog").value="";
+     document.getElementById("txtNameLog").value="";
+      document.getElementById("txtPasswordLog").value=""; //taking values in variables
+     document.getElementById("txtAddressLog").value="";
+
+
+    showDB()
+  }
+
+  function resetDB() {                                          //reset button
+    id = document.getElementById("txtIdLog").value
+    firebase.database().ref(`/Registration/` + id).remove();
+    alert("This id is deleted from database")
+
+    showDB()
+  }
+  
+  function del(OButton) {                                        //delete button table vala                                      
+    // OButton.parentNode.parentNode.style.display="none"
+    row = OButton.parentNode.parentNode
+
+    cells = row.getElementsByTagName("td") 
+    id = cells[3].innerHTML
+    firebase.database().ref(`/Registration/` + id).remove();
+
+
+    showDB()
+  }
+
+  function addItemOnTable(name, pass, id, address) {                //making of table
+
+    row = document.createElement("tr")
+    cell = document.createElement("td")
+    cell1 = document.createElement("td")
+    cell2 = document.createElement("td") //creating elements
+    cell3 = document.createElement("td")
+    cell4 = document.createElement("td")
+    cell5 = document.createElement("td")
+
+    btnDelete = document.createElement("input")
+    btnDelete.setAttribute("type", "button")
+    btnDelete.setAttribute("value", "Delete")                              //creating delete button
+    btnDelete.setAttribute("onclick", "del(this)")
+
+    textName = document.createElement("span")
+    textName.style.height = "100%"                                   //span tag for cell 1
+    textName.style.width = "100%"
+    textName.setAttribute("ondblclick", "editName(this)")
+    textName.innerHTML = name
+
+    textArea = document.createElement("textArea")
+    textArea.style.height = "100%"
+    textArea.style.width = "100%"
+    textArea.style.background = "none"                             //text area tag for cell 1
+    textArea.style.display = "none"
+
+    btnEdit = document.createElement("input")
+    btnEdit.setAttribute("type", "button")
+    btnEdit.setAttribute("value", "Update")                         //creating update button
+    btnEdit.setAttribute("onclick", "update(this)")
+
+    btnSelect = document.createElement("input")
+    btnSelect.setAttribute("type", "checkbox")                            //creating select button for every row
+
+    cell.appendChild(btnSelect)
+    cell1.appendChild(textName)
+    cell1.appendChild(textArea)
+    cell2.innerHTML = pass                             //assigning values to created  elements
+    cell3.innerHTML = id
+    cell4.innerHTML = address
+    cell5.appendChild(btnEdit)
+    cell5.appendChild(btnDelete)
+
+    row.appendChild(cell)
+    row.appendChild(cell1)
+    row.appendChild(cell2)                                    //appending data into row
+    row.appendChild(cell3)
+    row.appendChild(cell4)
+    row.appendChild(cell5)
+
+
+    document.getElementById("bdy").appendChild(row)               //appneding row into body
+
+
+    document.getElementById("txtName").value = "";
+    document.getElementById("txtPassword").value = "";
+    document.getElementById("txtId").value = "";
+    document.getElementById("txtAddress").value = "";
+  }
+
+
+//****************************************************ignore these functions*****************************************************
+  function set() {
+    if (document.getElementById("chk").checked == true) {
+      // select all checkbox
+      row = document.getElementById("bdy").getElementsByTagName("tr")
+      for (i = 0; i < row.length; i++) {
+        cells = row[i].getElementsByTagName("td") //select all feature
+        ck = cells[0].getElementsByTagName("input")
+        ck[0].checked = true
+      }
+
+    } else {
+      // deselect all checkbox
+      rows = document.getElementById("bdy").getElementsByTagName("tr")
+      for (i = 0; i < rows.length; i++) {
+        cells = rows[i].getElementsByTagName("td")
+        ck = cells[0].getElementsByTagName("input")
+        ck[0].checked = false
+      }
+    }
+
+  }
+
+  function selectDel() {
+    rows = document.getElementById("bdy").getElementsByTagName("tr")
+    //select all -delete button
+    for (i = 0; i < rows.length; i++) {
+      cells = rows[i].getElementsByTagName("td")
+      ck = cells[0].getElementsByTagName("input")
+      if (ck[0].checked == true) {
+        rows[i].style.display = "none"
+      }
+    }
+  }
+
+  function editName(OButton) {
+    row = OButton.parentNode.parentNode
+    row.cells[1].childNodes[1].value = row.cells[1].childNodes[0].innerHTML
+    row.cells[1].childNodes[1].style.display = "block" //edit on double click
+    row.cells[1].childNodes[0].style.display = "none"
+
+  }
+
+  function update(OButton) {
+    row = OButton.parentNode.parentNode;
+    row.cells[1].childNodes[0].innerHTML = row.cells[1].childNodes[1].value
+    row.cells[1].childNodes[0].style.display = "block" //chnage value after editing
+    row.cells[1].childNodes[1].style.display = "none"
+  }
+//***************************************************************************************************************
+  //   setTimeout(function() {
+  //     document.getElementById("splash").style.display = "none";
+  // }, 2000);
+
+
+  function accessReg() {
+    document.getElementById("accessRegister").style.display = "block"
+    document.getElementById("accessTable").style.display = "none"          //showing reg page
+    document.getElementById("accessLogin").style.display = "none"
+
+  }
+  function accessTab() {
+
+    document.getElementById("accessTable").style.display = "block"
+    document.getElementById("accessRegister").style.display = "none"      //showing table after login 
+    document.getElementById("accessLogin").style.display = "none"
+
+  }
+  function accessLogin() {
+
+    document.getElementById("accessTable").style.display = "none"
+    document.getElementById("accessRegister").style.display = "none"
+    document.getElementById("accessLogin").style.display = "block"
+
+  }
+
+  function login() {                                           //login button
+    // document.getElementById("bdy").innerHTML = "";
+
+    id = document.getElementById("txtIdLogin").value
+    password = document.getElementById("txtPasswordLogin").value
+    firebase.database().ref(`/Registration/` + id).on("value", function (snapshot) {
+      if (snapshot.val().ID != id) {
+        alert("wrong id")
+      }
+      else {
+        if (snapshot.val().Password == password) {
+
+          accessTab()                                 //showing table after login (yaha call krvaya hai verify krne k bad)
+        }
+        else {
+          alert("Wrong password");
+        }
+      }
+    })
+    document.getElementById("txtIdLogin").value=""
+      document.getElementById("txtPasswordLogin").value=""
+    showDB()
+  }
+</script>
+
+
+
+
+</html>
